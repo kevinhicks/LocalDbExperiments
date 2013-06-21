@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,10 @@ namespace Data
 
     public class DatabaseContext : DbContext
     {
+        public DatabaseContext() {
+            Debug.Write(Database.Connection.ConnectionString);
+        }
+                
         public DbSet<Person> People { get; set; }
     }
 }
