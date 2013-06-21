@@ -19,7 +19,7 @@ namespace Data
 
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext() {
+        public DatabaseContext() : base ("DatabaseContext") {
             Debug.Write(Database.Connection.ConnectionString);
         }
                 
