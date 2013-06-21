@@ -37,6 +37,7 @@ namespace LocalDbExperiment.Controllers
             var workflow = new Workflow();
 
             people.People = workflow.FindAllPeople();
+            ViewBag.Message = workflow.ConnectionString;
 
             return View(people);
         }

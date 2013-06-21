@@ -40,5 +40,14 @@ namespace Data
             return db.People.ToList();
         }
 
+        public string ConnectionString
+        {
+            get
+            {
+                return db.Database.Connection.ConnectionString;
+            }
+            private set{}
+        }
+
     }
 }

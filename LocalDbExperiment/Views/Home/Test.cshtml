@@ -1,6 +1,7 @@
 ﻿@model LocalDbExperiment.ViewModels.Home.ListOfPeopleViewModel
 
 <h2>Test</h2>
+<h1>@ViewBag.Message</h1>
 @foreach (var person in Model.People)
 {
     <div>@person.Name</div>
